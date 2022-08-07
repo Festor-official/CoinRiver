@@ -1,11 +1,14 @@
 package com.example.coinriver.data
 
 import androidx.room.ColumnInfo
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.Date
 
+@Entity(tableName = "expenses_table")
 data class Expenses(
-    @PrimaryKey(autoGenerate = true)
+
+    @PrimaryKey()
     @ColumnInfo(name = "expenses_id")
     val expenses_id:Int,
 
@@ -20,10 +23,5 @@ data class Expenses(
 
     @ColumnInfo(name = "expenses_took_from_piggy_bank")
     val expenses_took_from_piggy_bank:Boolean,
-
-
-
-
-
 
 )
